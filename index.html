@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="passChart" width="400" height="200"></canvas>
+    <script>
+        const data = {
+            labels: [
+                'Vlasova Karina Viktorivna',
+                'Vlasova Maryna Viktorivna',
+                'Ihor Volodymyrovych Voydyuk',
+                'Voloshchuk Rostyslav Ruslanovych',
+                'Victoria Oleksandrivna Davydenko',
+                'Davydenko Kateryna Oleksandrivna',
+                'Demoratskyi Nazar Evgeniyovych',
+                'Denisenko Vladyslav Vitaliyovych',
+                'Evlakhovych Ihor Vitaliyovych',
+                'Maksym Yuriyovych Zinin',
+                'Ibe Janet Yunanivna',
+                'Volodymyr Denisovych Karchevskyi',
+                'Anastasia Dmitrivna Lytvyn',
+                'Rostislav Pavlovich Luzhanskyi',
+                'Mitkin Dmytro Anatoliyovych',
+                'Maksym Volodymyrovych Mozhgovy',
+                'Ihor Vyacheslavovich Morgun',
+                'Moshnyaga Anton Vitaliyovych',
+                'Orlov Andrii Andriyovych',
+                'Palladius Danyil Eduardovych',
+                'Maria Mykhailivna passed away',
+                'Roman Oleksandrovych Prokopenko',
+                'Evgeniy Vasyliovych Rudenko',
+                'Saifullina Sofia Ayrativna'
+            ],
+            datasets: [{
+                label: 'Number of Passes',
+                data: [0, 2, 3, 0, 0, 0, 2, 0, 0, 0, 2, 5, 2, 1, 1, 4, 2, 1, 2, 0, 0, 0, 1, 2],
+                backgroundColor: 'rgba(72, 166, 84, 0.36)',
+                borderColor: 'rgba(0, 0, 0, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        const ctx = document.getElementById('passChart').getContext('2d');
+        const myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
